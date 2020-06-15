@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,UAAU,CAAC;EACT,gBAAgB,EAAE,GAAG;CACtB",
+    "sources": [
+        "main.scss",
+        "components/_app.scss",
+        "sections/_about.scss",
+        "sections/_contact.scss",
+        "sections/_home.scss",
+        "sections/_projects.scss",
+        "sections/_skills.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
