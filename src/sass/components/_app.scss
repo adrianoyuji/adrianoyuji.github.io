@@ -1,0 +1,19 @@
+.mainBody {
+  height: 100vh;
+  width: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/background/background.jpg");
+  // url("https://i.pinimg.com/originals/7c/9d/81/7c9d81bb520c5a8fa5d53f88e38db317.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-family: "Source Sans Pro", system, system-ui, -apple-system,
+    BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}

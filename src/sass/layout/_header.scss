@@ -1,0 +1,24 @@
+.headerContainer {
+  height: 5vh;
+  width: auto;
+  color: #fff;
+  font-weight: bold;
+  padding-right: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.languageChanger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .headerContainer {
+    font-size: small;
+  }
+}

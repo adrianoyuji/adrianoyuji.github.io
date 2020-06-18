@@ -1,0 +1,31 @@
+.navigationButton {
+  display: flex;
+  min-width: 80px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 7px;
+  color: #000;
+  font-weight: 100;
+  border-radius: 4px;
+  background: #fff; /* fallback for old browsers */
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 5px 3px 3px black;
+  user-select: none;
+  text-decoration: none;
+  &:active {
+    background: #555;
+    color: #ddd;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigationButton {
+    padding: 4px;
+    margin: 10px;
+    font-size: small;
+    min-width: 48px;
+  }
+}

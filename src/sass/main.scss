@@ -1,9 +1,13 @@
 //components
 @import "components/app";
 
+//layout
+@import "layout/header";
+@import "layout/navigationButton";
+@import "layout/modal";
+
 //sections
 @import "sections/about";
 @import "sections/contact";
 @import "sections/home";
 @import "sections/projects";
-@import "sections/skills";

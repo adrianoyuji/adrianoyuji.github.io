@@ -1,4 +1,297 @@
-.container {
-  background-color: red;
+.mainBody {
+  height: 100vh;
+  width: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../assets/background/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/background/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-family: "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.headerContainer {
+  height: 5vh;
+  width: auto;
+  color: #fff;
+  font-weight: bold;
+  padding-right: 15px;
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.languageChanger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .headerContainer {
+    font-size: small;
+  }
+}
+
+.navigationButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+  padding: 7px;
+  color: #000;
+  font-weight: 100;
+  border-radius: 4px;
+  background: #fff;
+  /* fallback for old browsers */
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 3px 3px black;
+          box-shadow: 5px 3px 3px black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+.navigationButton:active {
+  background: #555;
+  color: #ddd;
+}
+
+@media screen and (max-width: 767px) {
+  .navigationButton {
+    padding: 4px;
+    margin: 10px;
+    font-size: small;
+    min-width: 48px;
+  }
+}
+
+.modal {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalContainer {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+}
+
+.modalHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 16px;
+}
+
+.modalHeader .modalTitle {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  line-height: 0.5;
+  font-size: xx-large;
+}
+
+.modalHeader .closeButton {
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-shadow: 2px 2px #000;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.modalHeader .closeButton:hover {
+  color: #ddd;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .modalContainer {
+    max-width: unset;
+  }
+  .modalHeader {
+    padding: 8px;
+  }
+  .modalHeader .modalTitle {
+    font-size: x-large;
+  }
+}
+
+.aboutContainer {
+  color: white;
+}
+
+.personalDescription p {
+  font-size: x-large;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  .personalDescription p {
+    font-size: large;
+    font-weight: 300;
+  }
+}
+
+.homeContainer {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeContent {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+}
+
+.homeContent .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeContent .title h1 {
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 300;
+  line-height: 1.65;
+  letter-spacing: 0.25rem;
+}
+
+.homeContent .title p {
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.navButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  .homeContent {
+    padding: 4px;
+  }
+  h1 {
+    font-size: large;
+    text-align: center;
+  }
+  p {
+    font-size: small;
+  }
 }
 /*# sourceMappingURL=main.css.map */

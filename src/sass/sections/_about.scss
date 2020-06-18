@@ -1,0 +1,19 @@
+.aboutContainer {
+  color: white;
+}
+
+.personalDescription {
+  p {
+    font-size: x-large;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .personalDescription {
+    p {
+      font-size: large;
+      font-weight: 300;
+    }
+  }
+}
