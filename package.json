@@ -1,7 +1,7 @@
 {
-  "homepage": "https://adrianoyuji.github.io/",
-  "name": "adrianoyuji.github.io",
-  "version": "0.1.0",
+  "homepage": "https://adrianoyuji.github.io/web-portfolio/.",
+  "name": "web-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@mdi/js": "^5.3.45",
