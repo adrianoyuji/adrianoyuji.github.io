@@ -1,5 +1,6 @@
 {
-  "name": "developerportfolio",
+  "homepage": "https://adrianoyuji.github.io/",
+  "name": "adrianoyuji.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
