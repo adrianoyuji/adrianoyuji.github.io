@@ -1,24 +1,50 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../../context/global";
 
 export default function About() {
+  const { languageText } = useContext(GlobalContext);
   return (
     <div className="aboutContainer">
       <div className="personalDescription">
-        <p>
-          Hey! My name is Adriano Yuji Sato de Vasconcelos and I am a Front-end
-          Software developer! I am currently finishing my graduation as a
-          Computer Engineer in Brazil. I started focusing software development
-          skills in late 2019 when I realized I could work with both design and
-          programming.
-        </p>
-        <p>
-          I seek to become a professional software developer and I am always
-          open to new challenges. Right now I am honing my front-end abilities
-          so later I can start focusing on back-end technologies and become a
-          Full-Stack developer.
-        </p>
+        <p>{languageText.about.firstParagraph}</p>
+        <p>{languageText.about.secondParagraph}</p>
       </div>
-      <div className="skills"></div>
+      <h1>{languageText.about.skills.title}</h1>
+      <div className="skills">
+        <div className="skills-list">
+          <h4>{languageText.about.skills.frontend}</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>SASS</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Ajax</li>
+            <li>Bootstrap</li>
+            <li>React JS</li>
+            <li>React Native</li>
+            <li>Material UI</li>
+          </ul>
+        </div>
+
+        <div className="skills-list">
+          <h4>{languageText.about.skills.tools}</h4>
+          <ul>
+            <li>Git</li>
+            <li>Gitlab</li>
+            <li>Figma</li>
+            <li>Canva</li>
+            <li>Photoshop CC</li>
+            <li>Android Studio</li>
+          </ul>
+        </div>
+        <div className="skills-list">
+          <h4>{languageText.about.skills.methodologies}</h4>
+          <ul>
+            <li>SCRUM</li>
+            <li>Kanban</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

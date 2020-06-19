@@ -1,2 +1,32 @@
 .contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 2.5rem;
+    }
+    padding: 8px;
+    &:hover {
+      color: whitesmoke;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactContainer {
+    a {
+      svg {
+        width: 1.75rem;
+      }
+      padding: 4px;
+    }
+  }
 }

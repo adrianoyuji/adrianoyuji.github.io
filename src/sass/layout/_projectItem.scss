@@ -1,0 +1,123 @@
+.projectItem {
+  display: flex;
+  height: 256px;
+  width: 99%;
+  flex-direction: row;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  min-width: 50vw;
+  transition: all 0.2s ease-in-out;
+  a {
+    height: 100%;
+    width: 45%;
+  }
+  img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    object-fit: cover;
+  }
+  .projectInfo {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+  }
+  .projectTitle {
+    flex: 1;
+    font-size: x-large;
+  }
+
+  .projectDescription {
+    flex: 8;
+    overflow-y: scroll;
+    margin: 4px;
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: white;
+    }
+  }
+
+  .usefulLinks {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    a {
+      height: unset;
+      width: unset;
+      padding: 8px;
+      //padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      svg {
+        text-align: center;
+        width: 1.75rem;
+      }
+      &:hover {
+        color: whitesmoke;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectItem {
+    display: flex;
+    height: 128px;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    min-width: 50vw;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .projectInfo {
+      display: flex;
+      flex-direction: column;
+      margin: 8px;
+      .usefulLinks {
+        svg {
+          width: 1.5rem;
+        }
+        a {
+          padding: 4px;
+          margin-right: 15px;
+          font-size: 16px;
+        }
+      }
+    }
+    .projectTitle {
+      line-height: 4px;
+      font-size: medium;
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .projectItem {
+    &:hover {
+      transform: scale(0.99);
+      box-shadow: 5px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

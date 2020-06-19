@@ -7,18 +7,49 @@
   padding-top: 15px;
   display: flex;
   justify-content: flex-end;
-}
-.languageChanger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  border-radius: 8px;
+  .languageChanger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .languageButton {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 3px;
+    color: #000;
+    font-weight: 100;
+    border-radius: 4px;
+    background: #fff; /* fallback for old browsers */
+    cursor: pointer;
+    font-size: small;
+    font-weight: bold;
+    box-shadow: 5px 3px 3px black;
+    user-select: none;
+    text-decoration: none;
+    &:active {
+      background: #555;
+      color: #ddd;
+    }
+    &:hover {
+      background-color: #aaa;
+    }
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .headerContainer {
+    font-size: small;
+  }
+  .languageButton {
+    padding: 4px;
+    margin: 4px;
     font-size: small;
   }
 }

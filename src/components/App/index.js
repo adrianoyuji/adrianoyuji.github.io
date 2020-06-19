@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "../../context/global";
 
 //components
@@ -6,13 +6,13 @@ import Home from "../sections/Home";
 import Header from "../layout/Header";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
-import Contact from "../sections/Contact";
+import Footer from "../layout/Footer";
 
 //modal
 import Modal from "../layout/Modal";
 
 export default function App() {
-  const { section } = useContext(GlobalContext);
+  const { section, languageText } = useContext(GlobalContext);
 
   function renderSection() {
     switch (section) {
@@ -20,20 +20,14 @@ export default function App() {
         return <Home />;
       case "about":
         return (
-          <Modal title="ABOUT ME">
+          <Modal title={languageText.app.modalTitles.about}>
             <About />
           </Modal>
         );
       case "projects":
         return (
-          <Modal title="PROJECTS">
+          <Modal title={languageText.app.modalTitles.projects}>
             <Projects />
-          </Modal>
-        );
-      case "contact":
-        return (
-          <Modal title="LET'S WORK TOGETHER">
-            <Contact />
           </Modal>
         );
       default:
@@ -45,6 +39,7 @@ export default function App() {
     <div className="mainBody">
       <Header />
       {renderSection()}
+      <Footer />
     </div>
   );
 }

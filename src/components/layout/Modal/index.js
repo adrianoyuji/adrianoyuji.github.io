@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../../context/global";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import Icon from "@mdi/react";
+import { mdiClose } from "@mdi/js";
 
 export default function Modal(props) {
   const { setSection } = useContext(GlobalContext);
@@ -11,7 +11,7 @@ export default function Modal(props) {
         <div className="modalHeader">
           <div className="modalTitle">{props.title}</div>
           <div className="closeButton" onClick={() => setSection("home")}>
-            <FontAwesomeIcon icon={faTimes} />
+            <Icon path={mdiClose} size={1} color="white" />
           </div>
         </div>
         <div className="modalBody">{props.children}</div>

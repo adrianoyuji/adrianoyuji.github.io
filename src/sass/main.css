@@ -31,7 +31,7 @@ html {
           justify-content: flex-end;
 }
 
-.languageChanger {
+.headerContainer .languageChanger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,13 +41,61 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
   border-radius: 8px;
 }
 
-@media screen and (max-width: 767px) {
+.headerContainer .languageButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 3px;
+  color: #000;
+  font-weight: 100;
+  border-radius: 4px;
+  background: #fff;
+  /* fallback for old browsers */
+  cursor: pointer;
+  font-size: small;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 3px 3px black;
+          box-shadow: 5px 3px 3px black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+.headerContainer .languageButton:active {
+  background: #555;
+  color: #ddd;
+}
+
+.headerContainer .languageButton:hover {
+  background-color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
   .headerContainer {
+    font-size: small;
+  }
+  .languageButton {
+    padding: 4px;
+    margin: 4px;
     font-size: small;
   }
 }
@@ -87,6 +135,10 @@ html {
   color: #ddd;
 }
 
+.navigationButton:hover {
+  background-color: #aaa;
+}
+
 @media screen and (max-width: 767px) {
   .navigationButton {
     padding: 4px;
@@ -97,7 +149,7 @@ html {
 }
 
 .modal {
-  height: 90vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +168,8 @@ html {
 .modalContainer {
   padding: 16px;
   background-color: rgba(0, 0, 0, 0.8);
-  max-width: 50%;
+  max-width: 70%;
+  max-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,11 +217,20 @@ html {
 }
 
 .modalHeader .closeButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 4px;
+  padding-left: 4px;
   text-shadow: 2px 2px #000;
   font-weight: 300;
   cursor: pointer;
@@ -180,8 +242,33 @@ html {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 767px) {
+.modalBody {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.modalBody::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modalBody::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modalBody::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
   .modalContainer {
+    padding: 8px;
     max-width: unset;
   }
   .modalHeader {
@@ -192,8 +279,231 @@ html {
   }
 }
 
+.projectItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 256px;
+  width: 99%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  min-width: 50vw;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.projectItem a {
+  height: 100%;
+  width: 45%;
+}
+
+.projectItem img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projectItem .projectInfo {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 12px;
+}
+
+.projectItem .projectTitle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: x-large;
+}
+
+.projectItem .projectDescription {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  overflow-y: scroll;
+  margin: 4px;
+}
+
+.projectItem .projectDescription::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.projectItem .projectDescription::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.projectItem .projectDescription::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.projectItem .usefulLinks {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projectItem .usefulLinks a {
+  height: unset;
+  width: unset;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #fff;
+}
+
+.projectItem .usefulLinks a svg {
+  text-align: center;
+  width: 1.75rem;
+}
+
+.projectItem .usefulLinks a:hover {
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .projectItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 128px;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    min-width: 50vw;
+  }
+  .projectItem img {
+    height: 100%;
+    width: 100%;
+  }
+  .projectItem .projectInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 8px;
+  }
+  .projectItem .projectInfo .usefulLinks svg {
+    width: 1.5rem;
+  }
+  .projectItem .projectInfo .usefulLinks a {
+    padding: 4px;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  .projectItem .projectTitle {
+    line-height: 4px;
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .projectItem:hover {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+    -webkit-box-shadow: 5px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.contactContent {
+  min-height: 10vh;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactContent .contactTitle {
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  padding-bottom: 3px;
+}
+
+.contactContent .madeWithLove {
+  color: white;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .contactContent {
+    padding: unset;
+  }
+  .contactContent .madeWithLove {
+    font-size: small;
+  }
+}
+
 .aboutContainer {
   color: white;
+}
+
+.aboutContainer h1 {
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  line-height: 0.5;
+}
+
+.aboutContainer h4 {
+  font-size: large;
+  font-weight: 300;
 }
 
 .personalDescription p {
@@ -201,15 +511,93 @@ html {
   font-weight: 300;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .personalDescription p {
     font-size: large;
     font-weight: 300;
   }
 }
 
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.skills .skills-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.skills .skills-list h4 {
+  line-height: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .skills .skills-list h4 {
+    font-size: medium;
+  }
+  .skills .skills-list li {
+    font-size: smaller;
+  }
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.contactContainer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+}
+
+.contactContainer a svg {
+  width: 2.5rem;
+}
+
+.contactContainer a:hover {
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactContainer a {
+    padding: 4px;
+  }
+  .contactContainer a svg {
+    width: 1.75rem;
+  }
+}
+
 .homeContainer {
-  height: 90vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +647,6 @@ html {
   color: white;
   text-shadow: 2px 2px #000;
   font-weight: 300;
-  line-height: 1.65;
   letter-spacing: 0.25rem;
 }
 
@@ -293,5 +680,17 @@ html {
   p {
     font-size: small;
   }
+}
+
+.projectsContainer {
+  color: #fff;
+}
+
+.projectsContainer .projectHeader a {
+  color: lightblue;
+}
+
+.projectsContainer .projectHeader a:hover {
+  color: #3232ff;
 }
 /*# sourceMappingURL=main.css.map */

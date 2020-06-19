@@ -1,2 +1,11 @@
 .projectsContainer {
+  color: #fff;
+  .projectHeader {
+    a {
+      color: lightblue;
+      &:hover {
+        color: rgb(50, 50, 255);
+      }
+    }
+  }
 }

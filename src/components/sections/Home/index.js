@@ -3,19 +3,18 @@ import NavigationButton from "../../layout/NavigationButton";
 import { GlobalContext } from "../../../context/global";
 
 export default function Home() {
+  const { setSection, languageText } = useContext(GlobalContext);
   const navigationButtons = [
-    { title: "About", id: "about" },
-    { title: "Projects", id: "projects" },
-    { title: "Contact", id: "contact" },
+    { title: languageText.home.navigationButtons.about, id: "about" },
+    { title: languageText.home.navigationButtons.projects, id: "projects" },
   ];
-  const { setSection } = useContext(GlobalContext);
 
   return (
     <div className="homeContainer">
       <div className="homeContent">
         <div className="title">
           <h1>ADRIANO YUJI SATO DE VASCONCELOS</h1>
-          <p>FRONT-END SOFTWARE DEVELOPER</p>
+          <p>{languageText.home.softwareDeveloper}</p>
         </div>
         <div className="navButtons">
           {navigationButtons.map((button, index) => (
@@ -29,8 +28,9 @@ export default function Home() {
             className="navigationButton"
             href="https://docs.google.com/document/d/1OY8qQ37B4YHXq6c84a_CFTHwxQ323P19J8OhaJ4FyPk/edit?usp=sharing"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            Resume
+            {languageText.home.navigationButtons.resume}
           </a>
         </div>
       </div>
