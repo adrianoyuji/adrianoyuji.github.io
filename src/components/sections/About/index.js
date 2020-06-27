@@ -22,6 +22,7 @@ export default function About() {
             <li>Bootstrap</li>
             <li>React JS</li>
             <li>React Native</li>
+
             <li>Material UI</li>
           </ul>
         </div>
@@ -35,6 +36,7 @@ export default function About() {
             <li>Canva</li>
             <li>Photoshop CC</li>
             <li>Android Studio</li>
+            <li>Expo</li>
           </ul>
         </div>
         <div className="skills-list">

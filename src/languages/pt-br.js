@@ -48,6 +48,16 @@ export default {
       description:
         "Este website apresenta um catalago de produtos, uma carrinho de compras e um sistema de pagamento.",
       githubUrl: "https://github.com/adrianoyuji/sushi-store-website",
+      technologies: ["React", "CSS", "Firebase", "Bootstrap"],
+    },
+    {
+      title: "SATO REAL ESTATE",
+      imgUrl: "https://media2.giphy.com/media/XftZSLhso9dDUt5Rtw/giphy.gif",
+      liveUrl: "https://sato-real-estate.onrender.com/",
+      description:
+        "Este projeto simula um site de uma imobiliária, contendo um mapa responsivo com uma lista de propriedades a venda!",
+      githubUrl: "https://github.com/adrianoyuji/sato-real-estate",
+      technologies: ["React", "SCSS"],
     },
   ],
 };

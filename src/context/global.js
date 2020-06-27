@@ -16,6 +16,8 @@ export const GlobalProvider = ({ children }) => {
       case "portuguese":
         setLanguageText(languages.portuguese);
         break;
+      default:
+        return setLanguageText(languages.english);
     }
   }, [language]);
 

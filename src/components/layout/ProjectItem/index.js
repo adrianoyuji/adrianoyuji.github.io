@@ -16,7 +16,14 @@ export default function ProjectItem({ project }) {
       </a>
       <div className="projectInfo">
         <div className="projectTitle">{project.title}</div>
-        <p className="projectDescription">{project.description}</p>
+        <div className="projectDescription">
+          <p>{project.description}</p>
+          {project.technologies.map((technology, index) => (
+            <span className="technologyContainer" key={index}>
+              {technology}
+            </span>
+          ))}
+        </div>
         <div className="usefulLinks">
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
             <Icon path={mdiGithub} />

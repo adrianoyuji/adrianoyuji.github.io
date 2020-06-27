@@ -66,8 +66,7 @@ html {
   color: #000;
   font-weight: 100;
   border-radius: 4px;
-  background: #fff;
-  /* fallback for old browsers */
+  background-color: #fff;
   cursor: pointer;
   font-size: small;
   font-weight: bold;
@@ -80,13 +79,51 @@ html {
   text-decoration: none;
 }
 
+.headerContainer .languageButton:hover {
+  background-color: #aaa;
+}
+
 .headerContainer .languageButton:active {
-  background: #555;
+  background-color: #999;
   color: #ddd;
 }
 
-.headerContainer .languageButton:hover {
-  background-color: #aaa;
+.selectedLanguageButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 3px;
+  color: #fff;
+  font-weight: 100;
+  border-radius: 4px;
+  background-color: #222;
+  cursor: pointer;
+  font-size: small;
+  font-weight: bold;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+.selectedLanguageButton:hover {
+  background-color: #444;
+}
+
+.selectedLanguageButton:active {
+  background-color: #333;
+  color: #ddd;
 }
 
 @media screen and (max-width: 768px) {
@@ -163,6 +200,26 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modalContainer {
@@ -303,8 +360,7 @@ html {
 }
 
 .projectItem img {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -334,6 +390,17 @@ html {
           flex: 8;
   overflow-y: scroll;
   margin: 4px;
+}
+
+.projectItem .projectDescription .technologyContainer {
+  border: solid;
+  border-width: 2px;
+  border-color: #1e90ff;
+  color: #1e90ff;
+  border-radius: 8px;
+  font-size: smaller;
+  padding: 3px;
+  margin-right: 4px;
 }
 
 .projectItem .projectDescription::-webkit-scrollbar-track {
@@ -409,6 +476,11 @@ html {
     margin-top: 8px;
     margin-bottom: 8px;
     min-width: 50vw;
+  }
+  .projectItem .projectDescription .technologyContainer {
+    font-size: small;
+    border-width: 1px;
+    padding: 2px;
   }
   .projectItem img {
     height: 100%;
@@ -611,6 +683,17 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .homeContent {

@@ -2,16 +2,26 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../../context/global";
 
 export default function Header() {
-  const { setLanguage, languageText } = useContext(GlobalContext);
+  const { setLanguage, languageText, language } = useContext(GlobalContext);
+  console.log(language);
   return (
     <div className="headerContainer">
       <div className="languageChanger">
         <span>{languageText.header.languageChanger} </span>
-        <div className="languageButton" onClick={() => setLanguage("english")}>
+        <div
+          className={
+            language === "english" ? "selectedLanguageButton" : "languageButton"
+          }
+          onClick={() => setLanguage("english")}
+        >
           English
         </div>
         <div
-          className="languageButton"
+          className={
+            language === "portuguese"
+              ? "selectedLanguageButton"
+              : "languageButton"
+          }
           onClick={() => setLanguage("portuguese")}
         >
           Português

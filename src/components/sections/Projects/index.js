@@ -4,7 +4,7 @@ import { GlobalContext } from "../../../context/global";
 
 export default function Projects() {
   const { languageText } = useContext(GlobalContext);
-  console.log(languageText.projectList);
+
   return (
     <div className="projectsContainer">
       <p className="projectHeader">
@@ -20,7 +20,7 @@ export default function Projects() {
       </p>
 
       {languageText.projectList.map((project, index) => (
-        <ProjectItem project={project} />
+        <ProjectItem project={project} key={index} />
       ))}
     </div>
   );

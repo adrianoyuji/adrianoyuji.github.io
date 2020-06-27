@@ -26,20 +26,46 @@
     color: #000;
     font-weight: 100;
     border-radius: 4px;
-    background: #fff; /* fallback for old browsers */
+    background-color: #fff;
     cursor: pointer;
     font-size: small;
     font-weight: bold;
     box-shadow: 5px 3px 3px black;
     user-select: none;
     text-decoration: none;
-    &:active {
-      background: #555;
-      color: #ddd;
-    }
+
     &:hover {
       background-color: #aaa;
     }
+    &:active {
+      background-color: #999;
+      color: #ddd;
+    }
+  }
+}
+.selectedLanguageButton {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 3px;
+  color: #fff;
+  font-weight: 100;
+  border-radius: 4px;
+  background-color: #222;
+  cursor: pointer;
+  font-size: small;
+  font-weight: bold;
+  box-shadow: unset;
+  user-select: none;
+  text-decoration: none;
+  &:hover {
+    background-color: #444;
+  }
+  &:active {
+    background-color: #333;
+    color: #ddd;
   }
 }
 
