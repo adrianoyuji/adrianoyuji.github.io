@@ -59,6 +59,15 @@ export default {
       githubUrl: "https://github.com/adrianoyuji/sato-real-estate",
       technologies: ["React", "SCSS"],
     },
+    {
+      title: "PEDRA PAPEL TESOURA",
+      imgUrl: "https://media0.giphy.com/media/PmSNCIkpqq6FyHfahi/giphy.gif",
+      liveUrl: "https://rock-paper-scissors-master-navy.vercel.app/",
+      description:
+        "Um simples website que você pode jogar pedra papel tesoura com um inteligência artificial simples, o website salva sua pontuação!",
+      githubUrl: "https://github.com/adrianoyuji/rock-paper-scissors-master",
+      technologies: ["Javascript", "CSS", "HTML"],
+    },
   ],
 };
 /* projectName: {

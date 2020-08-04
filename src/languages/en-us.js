@@ -59,6 +59,15 @@ export default {
       githubUrl: "https://github.com/adrianoyuji/sato-real-estate",
       technologies: ["React", "SCSS"],
     },
+    {
+      title: "ROCK PAPER SCISSORS",
+      imgUrl: "https://media0.giphy.com/media/PmSNCIkpqq6FyHfahi/giphy.gif",
+      liveUrl: "https://rock-paper-scissors-master-navy.vercel.app/",
+      description:
+        "A simples website that lets you play Rock Paper Scissors with a simple Artifical Intelligence, the website stores you score!",
+      githubUrl: "https://github.com/adrianoyuji/rock-paper-scissors-master",
+      technologies: ["Javascript", "CSS", "HTML"],
+    },
   ],
 };
 
